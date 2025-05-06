@@ -35,3 +35,19 @@ head(ends_geo)
 
 end_time - start_time
 ## Time difference of 0.5061 secs
+
+library(arrow)
+
+geo_parquet = 'C:\\Users\\r1439546\\Documents\\git\\semobdf\\bos_geocode.parquet'
+
+# arrow::open_dataset((sources = geo_parquet)$schema)
+
+# colnames(read_parquet('C:\\Users\\r1439546\\Documents\\git\\semobdf\\bos_geocode.parquet', as_data_frame = FALSE))
+
+dados <-read_parquet('C:\\Users\\r1439546\\Documents\\git\\semobdf\\bos_geocode.parquet', col_select = c("USER_seq" , "USER_ED_OCORRENCIA" , "USER_ED_NUMERO_OCORRENCIA" , "USER_ED_COMPLEMENTO_OCORRENCIA" , "USER_ED_CEP_OCORRENCIA" , "USER_ED_BAIRRO_OCORRENCIA", "USER_ED_LATITUDE_OCORRENCIA" , "USER_ED_LONGITUDE_OCORRENCIA" , "USER_DS_PTO_REF_OCORRENCIA" , "USER_DS_LOCAL_OCORRENCIA" , "USER_CO_PAIS" , "USER_CO_MUNICIPIO" , "USER_SG_UF" , "USER_NO_PROVINCIA_MUNICIPIO" , "USER_name_muni", "X", "Y"))
+#select * from read_parquet('C:\Users\r1439546\Documents\git\semobdf\bos_geocode.parquet') LIMIT 10
+
+
+#  "USER_seq" , "USER_ED_OCORRENCIA" , "USER_ED_NUMERO_OCORRENCIA" , "USER_ED_COMPLEMENTO_OCORRENCIA" , "USER_ED_CEP_OCORRENCIA" , "USER_ED_BAIRRO_OCORRENCIA", "USER_ED_LATITUDE_OCORRENCIA" , "USER_ED_LONGITUDE_OCORRENCIA" , "USER_DS_PTO_REF_OCORRENCIA" , "USER_DS_LOCAL_OCORRENCIA" , "USER_CO_PAIS" , "USER_CO_MUNICIPIO" , "USER_SG_UF" , "USER_NO_PROVINCIA_MUNICIPIO" , "USER_name_muni", "X", "Y"
+
+
